@@ -1,6 +1,6 @@
 # Search & Morty :p 
 *Made around the Test Driven Development course.*
-![rick & morty background]()
+![rick & morty background](assets/rick-pq.png)
 
 
 ## Rules
