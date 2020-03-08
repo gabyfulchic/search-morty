@@ -1,6 +1,7 @@
 # Search & Morty :p 
 ![python-version](https://img.shields.io/badge/python-v3.8-brightgreen)
-![ramapi-version](https://img.shields.io/badge/ramapi-v0.1.0-orange)  
+![ramapi-version](https://img.shields.io/badge/ramapi-v0.1.0-orange)
+![flask-web-framework](https://img.shields.io/badge/Flask-web--framework-lightgrey)  
   
 *Made around the Test Driven Development course.*
   
@@ -17,8 +18,10 @@
 - then REFACTORING the code to make it cleaner and more efficient (BLUE)
 ```
   
-## Objectives   
+## Development Objectives   
   
+- [ ] Play with [ramapi](https://github.com/curiousrohan/ramapi)
+- [ ] Play with [flask](https://github.com/pallets/flask)
 - [ ] Display web interface returning characters' info (format: link)
 - [ ] Do the same thing but include search bar and output json object
 - [ ] Format all json to make a good UI 
@@ -26,7 +29,13 @@
 - [ ] Add features to check episodes & all character's locations into
 - [ ] Search some "plus value" for our project than reach API with curl
   
-## Check project
+## Infrastructure Objectives  
+  
+- [ ] Automate app deployment with Ansible (Check git submodules)
+- [ ] Deploy app using HTTPS and let's encrypt SSL cert
+- [ ] Deploy app accessible everywhere and avoid installation of projet (Cloud)  
+  
+## Reach project
   
 ```python
 https://weeking.tk:8443
