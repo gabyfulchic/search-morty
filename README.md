@@ -40,3 +40,10 @@
 ```python
 https://weeking.tk:8443
 ```
+
+## Launch Projet in local
+  
+```python
+pip install -r requirements.txt
+py main.py
+```
