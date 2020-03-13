@@ -20,10 +20,10 @@
   
 ## Development Objectives   
   
-- [ ] Play with [ramapi](https://github.com/curiousrohan/ramapi)
-- [ ] Play with [flask](https://github.com/pallets/flask)
-- [ ] Display web interface returning characters' info (format: link)
-- [ ] Do the same thing but include search bar and output json object
+- [x] Play with [ramapi](https://github.com/curiousrohan/ramapi) **@everyone**
+- [x] Play with [flask](https://github.com/pallets/flask) **@everyone** 
+- [x] Display web interface returning characters' info (format: link) **@Alexandre-Abruzzese**
+- [x] Do the same thing but include search bar and output json object **@Alexandre-Abruzzese**
 - [ ] Format all json to make a good UI 
 - [ ] Include auto completion for user research
 - [ ] Add features to check episodes & all character's locations into
@@ -31,29 +31,39 @@
   
 ## Infrastructure Objectives  
   
-- [ ] Automate app deployment with Ansible (Check git submodules)
-- [ ] Deploy app using HTTPS and let's encrypt SSL cert
-- [ ] Deploy app accessible everywhere and avoid installation of projet (Cloud)  
+- [x] Automate app deployment with Ansible (Check [git submodules](https://github.com/gabyfulchic/ansible-flask)) **@gabyfulchic**
+- [x] Deploy app using HTTPS and let's encrypt SSL certbot **@gabyfulchic**
+- [x] Deploy app accessible everywhere and avoid installation of projet (OVH Cloud) **@gabyfulchic**
   
-## Reach project
+## Project
+  
+[https://weeking.tk](https://weeking.tk)
+  
+  
+### Launch Projet in local to DEV (127.0.0.1)
   
 ```python
-http://weeking.tk:5000
-```
-
-## Launch Projet in local
-  
-```python
+git clone https://github.com/gabyfulchic/search-morty.git && cd search-morty/
 pip install -r requirements.txt
-env FLASK_APP="/path/to/main.py" flask run --host=127.0.0.1 --debug=True
+env FLASK_APP="/path/to/main.py" flask run
 ```
 
-## Enable project to be worldwide
+### Enable project to be worldwide (HTTP & HTTPS)
   
+> HTTP  
 ```python
 ssh your_user@your_server
 cd /usr/share && git clone https://github.com/gabyfulchic/search-morty.git && cd search-morty
 pip install -r requiremnts.txt
-env FLASK_APP='/usr/share/search-morty/app/routes.py' flask run --host=0.0.0.0
+env FLASK_APP='/usr/share/search-morty/app/routes.py' flask run --host=0.0.0.0 -p 80
 ```
-(Don't forget to open port 5000)
+(Don't forget to open port 80)  
+> HTTPS  
+```python
+ssh your_user@your_server
+cd /usr/share && git clone https://github.com/gabyfulchic/search-morty.git && cd search-morty
+pip install -r requiremnts.txt
+certbot certonly --standalone
+env FLASK_APP='/usr/share/search-morty/app/routes.py' flask run --host=0.0.0.0 -p 443 --cert=/path --key=/path
+```
+(Don't forget to open port 443)
