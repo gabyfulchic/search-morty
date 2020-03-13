@@ -16,7 +16,7 @@ def get_all_characters():
     return ramapi.Character.get_all().get("results", "")
 
 
-def get_episodes_where_character_is():
+def get_all_episodes():
     return ramapi.Episode.get_all().get("results", "")
 
 
@@ -34,7 +34,7 @@ def index():
     else:
         for c in get_all_characters():
             if (character_to_search == c.get("name", "")):
-                for e in get_episodes_where_character_is():
+                for e in get_all_episodes():
                     all_episodes_list.append(e.get("name", ""))
                 return render_template('all_episode.jinja', character = character_to_search, all_episodes = all_episodes_list)
 
