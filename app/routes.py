@@ -29,9 +29,6 @@ def my_form_post():
         all_characters = get_all_characters()
         for c in all_characters:
             if (character_to_search == c.get("name", "")):
-                find = 1
-                break
-        if (find == 1):
-            return "Nous avons trouvé votre personnage : " + character_to_search
+                return "Nous avons trouvé votre personnage : " + character_to_search
 
     return "Désolé, nous n'avons pas trouvé votre personnage."
