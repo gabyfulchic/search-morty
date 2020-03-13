@@ -1,0 +1,14 @@
+<!doctype html>
+
+ <html>
+     <head>
+         <title>Liste des épisodes - {{ character }}</title>
+     </head>
+     
+     <body>
+         <p>Votre personnage {{ character }} apparait dans les épisodes suivants :</p>
+        {% for episode in all_episodes %}
+            <li>{{ episode }} </li>
+        {% endfor %}
+     </body>
+ </html> 

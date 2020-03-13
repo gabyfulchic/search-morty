@@ -11,24 +11,31 @@ def create_first_page():
 
     return app
 
+
 def get_all_characters():
     return ramapi.Character.get_all().get("results", "")
 
+
+def get_episodes_where_character_is():
+    return ramapi.Episode.get_all().get("results", "")
+
+
 @app.route("/")
 def home():
-    return render_template('index.html')
+    return render_template('index.jinja')
 
 @app.route("/", methods=['POST'])
-def my_form_post():
-    find = 0
+def index():
+    all_episodes_list = []
     character_to_search = request.form['character']
 
     if (character_to_search == ""):
         return "Merci de saisir un personnage."
     else:
-        all_characters = get_all_characters()
-        for c in all_characters:
+        for c in get_all_characters():
             if (character_to_search == c.get("name", "")):
-                return "Nous avons trouvé votre personnage : " + character_to_search
+                for e in get_episodes_where_character_is():
+                    all_episodes_list.append(e.get("name", ""))
+                return render_template('all_episode.jinja', character = character_to_search, all_episodes = all_episodes_list)
 
     return "Désolé, nous n'avons pas trouvé votre personnage."
