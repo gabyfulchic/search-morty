@@ -38,12 +38,22 @@
 ## Reach project
   
 ```python
-https://weeking.tk:8443
+http://weeking.tk:5000
 ```
 
 ## Launch Projet in local
   
 ```python
 pip install -r requirements.txt
-py main.py
+env FLASK_APP="/path/to/main.py" flask run --host=127.0.0.1 --debug=True
 ```
+
+## Enable project to be worldwide
+  
+```python
+ssh your_user@your_server
+cd /usr/share && git clone https://github.com/gabyfulchic/search-morty.git && cd search-morty
+pip install -r requiremnts.txt
+env FLASK_APP='/usr/share/search-morty/app/routes.py' flask run --host=0.0.0.0
+```
+(Don't forget to open port 5000)
