@@ -42,7 +42,7 @@
   
 ### Launch Projet in local to DEV (127.0.0.1)
   
-```python
+```
 git clone https://github.com/gabyfulchic/search-morty.git && cd search-morty/
 pip install -r requirements.txt
 env FLASK_APP="/path/to/main.py" flask run
@@ -51,7 +51,7 @@ env FLASK_APP="/path/to/main.py" flask run
 ### Enable project to be worldwide (HTTP & HTTPS)
   
 > HTTP  
-```python
+```
 ssh your_user@your_server
 cd /usr/share && git clone https://github.com/gabyfulchic/search-morty.git && cd search-morty
 pip install -r requiremnts.txt
@@ -59,7 +59,7 @@ env FLASK_APP='/usr/share/search-morty/app/routes.py' flask run --host=0.0.0.0 -
 ```
 (Don't forget to open port 80)  
 > HTTPS  
-```python
+```
 ssh your_user@your_server
 cd /usr/share && git clone https://github.com/gabyfulchic/search-morty.git && cd search-morty
 pip install -r requiremnts.txt
