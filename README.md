@@ -54,7 +54,7 @@ env FLASK_APP="/path/to/main.py" flask run
 ```
 ssh your_user@your_server
 cd /usr/share && git clone https://github.com/gabyfulchic/search-morty.git && cd search-morty
-pip install -r requiremnts.txt
+pip install -r requirements.txt
 env FLASK_APP='/usr/share/search-morty/app/routes.py' flask run --host=0.0.0.0 -p 80
 ```
 (Don't forget to open port 80)  
@@ -62,7 +62,7 @@ env FLASK_APP='/usr/share/search-morty/app/routes.py' flask run --host=0.0.0.0 -
 ```
 ssh your_user@your_server
 cd /usr/share && git clone https://github.com/gabyfulchic/search-morty.git && cd search-morty
-pip install -r requiremnts.txt
+pip install -r requirements.txt
 certbot certonly --standalone
 env FLASK_APP='/usr/share/search-morty/app/routes.py' flask run --host=0.0.0.0 -p 443 --cert=/path --key=/path
 ```
