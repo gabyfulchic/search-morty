@@ -1,3 +1,0 @@
-[submodule "ansible-flask"]
-	path = ansible-flask
-	url = git@github.com:gabyfulchic/ansible-flask.git
